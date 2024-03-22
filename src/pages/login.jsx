@@ -24,7 +24,7 @@ const Login = () => {
         userService.login(formData) // send data from my form
              .then(res => {
                 console.log(res)
-                userService.saveToken(res.data.access_token) // i get the token from the result axios
+                userService.saveToken(res.data.body.token) // i get the token from the result axios(folow the structure of the object exeample:body.token)
                 navigate('/user')
             })
              .catch(error => console.log(error))

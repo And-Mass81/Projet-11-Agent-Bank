@@ -17,6 +17,10 @@ let isLogged =() =>{
     return !!token // if there is something in localStorage = true
 }
 
+let getToken =() =>{
+    return localStorage.getItem('token')
+}
+
 export const userService ={
-    login, saveToken, logout , isLogged
+    login, saveToken, logout , isLogged ,getToken
 }
